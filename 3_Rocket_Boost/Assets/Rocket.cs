@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
+    [SerializeField]float rcsThrust = 100f;
+    [SerializeField] float mainThrust = 100f;
+
     Rigidbody rigidBody;
     AudioSource audioSource;
     // Start is called before the first frame update
@@ -24,7 +27,9 @@ public class Rocket : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up);
+            float liftThisFrame = mainThrust * Time.deltaTime;
+
+            rigidBody.AddRelativeForce(Vector3.up * liftThisFrame);
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
@@ -38,8 +43,6 @@ public class Rocket : MonoBehaviour
     private void Rotate()
     {
         rigidBody.freezeRotation = true; // take manual control of rotation
-
-        float rcsThrust = 100f;
         float rotationThisFrame = rcsThrust * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.A))
@@ -52,5 +55,23 @@ public class Rocket : MonoBehaviour
         }
 
         rigidBody.freezeRotation = false; // resume physics control of rotation
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                // do nothing
+                print("OK"); //todo remove
+                break;
+            case "Fuel":
+                // do nothing
+                print("Fuel"); //todo remove
+                break;
+            default:
+                print("Dead");
+                break;
+        }
     }
 }
