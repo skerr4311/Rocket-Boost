@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -65,12 +63,14 @@ public class Rocket : MonoBehaviour
                 // do nothing
                 print("OK"); //todo remove
                 break;
-            case "Fuel":
+            case "Finish":
                 // do nothing
-                print("Fuel"); //todo remove
+                print("Hit Finish"); //todo remove
+                SceneManager.LoadScene(1);
                 break;
             default:
                 print("Dead");
+                SceneManager.LoadScene(0);
                 break;
         }
     }

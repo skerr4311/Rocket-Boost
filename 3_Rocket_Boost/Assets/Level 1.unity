@@ -342,6 +342,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain Object
       objectReference: {fileID: 0}
+    - target: {fileID: 3121268169776912620, guid: e6af7a63d3c2f01489674e42c4e0d5ac,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e60974bedb27b414da50d91b6a908508, type: 2}
+    - target: {fileID: 4151699796249411379, guid: e6af7a63d3c2f01489674e42c4e0d5ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361095536970977700, guid: e6af7a63d3c2f01489674e42c4e0d5ac,
+        type: 3}
+      propertyPath: m_Name
+      value: Landing Pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361095536970977700, guid: e6af7a63d3c2f01489674e42c4e0d5ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6af7a63d3c2f01489674e42c4e0d5ac, type: 3}
 --- !u!1001 &3077789778671318546
@@ -581,7 +601,7 @@ PrefabInstance:
     - target: {fileID: 9112651453016691016, guid: 169c735183d93f0498d18bfdb74ce772,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 9112651453016691016, guid: 169c735183d93f0498d18bfdb74ce772,
         type: 3}
@@ -627,6 +647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 231.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112651453016691016, guid: 169c735183d93f0498d18bfdb74ce772,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 46.821003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 169c735183d93f0498d18bfdb74ce772, type: 3}
