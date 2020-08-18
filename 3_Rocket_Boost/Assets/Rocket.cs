@@ -8,19 +8,25 @@ public class Rocket : MonoBehaviour
 
     Rigidbody rigidBody;
     AudioSource audioSource;
-    // Start is called before the first frame update
+
+    enum State { Alive, Dying, Transcending }
+    State state = State.Alive;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Thrust();
-        Rotate();
+        if (state == State.Alive)
+        {
+            Thrust();
+            Rotate();
+        }
     }
+
     private void Thrust()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -38,6 +44,7 @@ public class Rocket : MonoBehaviour
             audioSource.Stop();
         }
     }
+
     private void Rotate()
     {
         rigidBody.freezeRotation = true; // take manual control of rotation
@@ -57,6 +64,10 @@ public class Rocket : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (state != State.Alive)
+        {
+            return;
+        }
         switch (collision.gameObject.tag)
         {
             case "Friendly":
@@ -65,13 +76,23 @@ public class Rocket : MonoBehaviour
                 break;
             case "Finish":
                 // do nothing
-                print("Hit Finish"); //todo remove
-                SceneManager.LoadScene(1);
+                state = State.Transcending;
+                Invoke("LoadNextScene", 1f);
                 break;
             default:
-                print("Dead");
-                SceneManager.LoadScene(0);
+                state = State.Dying;
+                Invoke("LoadFirstLevel", 1f);
                 break;
         }
+    }
+
+    private void LoadFirstLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
