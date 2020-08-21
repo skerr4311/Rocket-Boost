@@ -225,6 +225,11 @@ PrefabInstance:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8473698137920239644, guid: 187c842c9a1bf0744ace224c304f4d28,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187c842c9a1bf0744ace224c304f4d28, type: 3}
 --- !u!1 &2096023110 stripped
