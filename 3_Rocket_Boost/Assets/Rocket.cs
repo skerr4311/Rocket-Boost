@@ -108,7 +108,6 @@ public class Rocket : MonoBehaviour
         {
             case "Friendly":
                 // do nothing
-                print("OK"); //todo remove
                 break;
             case "Finish":
                 // do nothing
@@ -145,6 +144,13 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene(2);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int maxLevels = SceneManager.sceneCountInBuildSettings - 1;
+
+        int nextScene = currentSceneIndex == maxLevels ? 0 : currentSceneIndex + 1;
+
+        string testing = "Test" == "Test" ? "True" : "False";
+        print(testing);
+        SceneManager.LoadScene(nextScene);
     }
 }

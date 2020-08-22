@@ -137,7 +137,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8c393bd7e15e4044b857b4382c6c9ed2, type: 2}
+      objectReference: {fileID: 2100000, guid: 4093f763de65d074abf8df292d099bae, type: 2}
     - target: {fileID: 9017673093408981692, guid: 8455294120eaa8b4789f3065889fc8a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -697,7 +697,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1788,7 +1788,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 33
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1814,7 +1814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183007436}
   m_LocalRotation: {x: 0.09770194, y: -0, z: -0, w: 0.9952157}
-  m_LocalPosition: {x: -35.1, y: 29.8, z: 97.6}
+  m_LocalPosition: {x: -35.1, y: 39.8, z: 47.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2619,7 +2619,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8c393bd7e15e4044b857b4382c6c9ed2, type: 2}
+      objectReference: {fileID: 2100000, guid: 4093f763de65d074abf8df292d099bae, type: 2}
     - target: {fileID: 9017673093408981692, guid: 8455294120eaa8b4789f3065889fc8a6,
         type: 3}
       propertyPath: m_LocalPosition.x
