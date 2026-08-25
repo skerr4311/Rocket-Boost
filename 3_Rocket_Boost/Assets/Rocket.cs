@@ -45,7 +45,7 @@ public class Rocket : MonoBehaviour
 
     private void RespondToThrustInput()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
         {
             ApplyThrust();
         }
